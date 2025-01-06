@@ -47,6 +47,6 @@ public void i_should_be_told(String expectedAnswer) {
 ---
 
 .Capture d'écran des tests
-image::img/tp1[]
+image::img/tp1.png[]
 
 == TP2...
