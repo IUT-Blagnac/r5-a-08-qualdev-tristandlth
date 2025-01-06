@@ -2,7 +2,7 @@
 :icons: font
 :MoSCoW: https://fr.wikipedia.org/wiki/M%C3%A9thode_MoSCoW[MoSCoW]
 
-Ce dépôt concerne les rendus de mailto:A_changer@etu.univ-tlse2.fr[Jonh Doe].
+Ce dépôt concerne les rendus de mailto:tristan.delthil@etu.univ-tlse2.fr[Tristan Delthil].
 
 == TP1
 Fichier "is_it_friday_yet.feature" : 
