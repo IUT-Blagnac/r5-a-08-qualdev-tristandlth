@@ -6,7 +6,8 @@ Ce dépôt concerne les rendus de mailto:A_changer@etu.univ-tlse2.fr[Jonh Doe].
 
 == TP1
 Fichier "is_it_friday_yet.feature" : 
-Feature: Is it Friday yet?
+
+Feature: Is it Friday yet? +
   Everybody wants to know when it's Friday
 
   Scenario: Sunday isn't Friday
@@ -45,7 +46,7 @@ public void i_should_be_told(String expectedAnswer) {
 }
 ---
 
-.Exemple d'image insérée en asciidoc
+.Capture d'écran des tests
 image::img/tp1[]
 
 == TP2...
