@@ -5,18 +5,47 @@
 Ce dépôt concerne les rendus de mailto:A_changer@etu.univ-tlse2.fr[Jonh Doe].
 
 == TP1
+Fichier "is_it_friday_yet.feature" : 
+Feature: Is it Friday yet?
+  Everybody wants to know when it's Friday
 
-.Exemple de code
+  Scenario: Sunday isn't Friday
+    Given today is Sunday
+    When I ask whether it's Friday yet
+    Then I should be told "Nope"
+  Scenario: Friday is Friday
+    Given today is Friday
+    When I ask whether it's Friday yet
+    Then I should be told "TGIF"
+
+Code :
 [source,java]
 ---
+private String today;
+private String actualAnswer;
+
 @Given("today is Sunday")
 public void today_is_sunday() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+    today = "Sunday";
+}
+
+@Given("today is Friday")
+public void today_is_friday() {
+    today = "Friday";
+}
+
+@When("I ask whether it's Friday yet")
+public void i_ask_whether_it_s_friday_yet() {
+    actualAnswer = IsItFriday.isItFriday(today);
+}
+
+@Then("I should be told {string}")
+public void i_should_be_told(String expectedAnswer) {
+    assertEquals(expectedAnswer, actualAnswer);
 }
 ---
 
 .Exemple d'image insérée en asciidoc
-image::artifacts-r303.svg[width=80%]
+image::img/tp1[]
 
 == TP2...
