@@ -21,25 +21,28 @@ Feature: Is it Friday yet? +
 
 Code :
 [source,java]
----
 private String today;
 private String actualAnswer;
 
+[source,java]
 @Given("today is Sunday")
 public void today_is_sunday() {
     today = "Sunday";
 }
 
+[source,java]
 @Given("today is Friday")
 public void today_is_friday() {
     today = "Friday";
 }
 
+[source,java]
 @When("I ask whether it's Friday yet")
 public void i_ask_whether_it_s_friday_yet() {
     actualAnswer = IsItFriday.isItFriday(today);
 }
 
+[source,java]
 @Then("I should be told {string}")
 public void i_should_be_told(String expectedAnswer) {
     assertEquals(expectedAnswer, actualAnswer);
@@ -50,3 +53,35 @@ public void i_should_be_told(String expectedAnswer) {
 image::img/tp1.png[]
 
 == TP2...
+Fichier Order.java : 
+
+[source,java]
+package dojo;
+import java.util.ArrayList;
+import java.util.List;
+
+[source,java]
+public class Order {
+    private String owner;
+    private String target;
+    private List<String> cocktails;
+
+[source,java]
+    public Order() {
+        this.cocktails = new ArrayList<>();
+    }
+    public void declareOwner(String owner) {
+        this.owner = owner;
+    }
+    public void declareTarget(String target) {
+        this.target = target;
+    }
+    public List<String> getCocktails() {
+        return cocktails;
+    }
+    public void addCocktail(String cocktail) {
+        cocktails.add(cocktail);
+    }
+}
+
+image::img/tp2.png[]
